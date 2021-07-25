@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --primary: #111128;
+  --dark: #0c0d1f;
+  --textPrimary: #ffffff;
+  --textSecondary: orangered;
+  --light: #fbfff1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+a:hover {
+  color: var(--textSecondary) !important;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+svg#freepik_stories-programming:not(.animated) .animable {
+  opacity: 0;
+}
+
+#csv-button {
+  background-color: var(--textSecondary);
+  color: white;
+  margin-right: 100px;
+}
+
+#csv-button:hover {
+  background-color: var(--primary);
+}
+
+#github-icon,
+#linkedin-icon,
+#youtube-icon {
+  color: var(--primary);
+  font-size: 2.7rem;
+  margin: 5px 10px 0 10px;
+}
+
+#github-icon:hover,
+#linkedin-icon:hover,
+#youtube-icon:hover {
+  color: var(--textSecondary) !important;
+}
