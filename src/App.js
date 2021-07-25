@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Paper from '@material-ui/core/Paper';
+import Navbar from './components/Navbar';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import Home from './components/Home';
+import ParticlesBg from './components/ParticlesBg';
+import Contact from './components/Contact';
+import About from './components/About';
+import { AnimatePresence } from 'framer-motion';
 
-function App() {
+const App = () => {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Paper square style={{ height: '100vh', width: '100vw', backgroundColor: 'var(--textPrimary)' }}>
+      <Navbar />
+      <ParticlesBg style={{ zIndex: '-1' }} />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </AnimatePresence>
+    </Paper>
+
   );
 }
 
